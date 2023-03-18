@@ -1,10 +1,12 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const pageTitle: string = "C'est le blog";
 ---
 
-<html lang="en">
+<html>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,9 +15,7 @@ const pageTitle: string = "C'est le blog";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+		<Header />
 
 		<h1>{pageTitle}</h1>
 		<p>This is where I will post about my journey learning Astro.</p>
@@ -24,5 +24,9 @@ const pageTitle: string = "C'est le blog";
 			<li><a href="/posts/post-2/">Post 2</a></li>
 			<li><a href="/posts/post-3/">Post 3</a></li>
 		</ul>
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>

@@ -1,10 +1,12 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const pageTitle: string = "Home page";
 ---
 
-<html lang="en">
+<html>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,6 +15,11 @@ const pageTitle: string = "Home page";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
+		<Header />
 		<h1>Woup woup</h1>
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
